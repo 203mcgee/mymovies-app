@@ -18,5 +18,8 @@ router.get('/:id',(req,res)=>{
 router.get('/sort/:sorter',(req,res)=>{
     dao.sort(res,dao.table,req.params.sorter)
 })
+router.get('/directorMovie/:d',(req,res)=>{
+    dao.findByDirector(res,dao.table,req.params.d)
+})
 
 module.exports = router

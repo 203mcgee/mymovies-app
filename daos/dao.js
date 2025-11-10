@@ -26,11 +26,17 @@ const streamingPlatformDaos ={
     ...require('./api/streamingPlatformDaos')
 }
 
+const productionDaos = {
+    ...daoCommon,
+    ...require('./api/productionDaos')
+}
+
 
 module.exports = {
     movieDaos,
     directorDaos,
     actorDaos,
     genreDaos,
-    streamingPlatformDaos
+    streamingPlatformDaos,
+    productionDaos
 }

@@ -182,6 +182,26 @@ const daoCommon = {
 
         )
     },
+    beginsWithLetter_production: (res,table,letter) => {
+        connect.query(
+            `SELECT * FROM production WHERE production LIKE '${letter}%'`,
+            (error,rows) => {
+                if(!error){
+                    res.json(...rows)
+
+                }
+                else{
+                    console.log(`DAO Error: ${error}`)
+                    res.json({
+                        "message":'error',
+                        'table':`${table}`,
+                        'error':error
+                    })
+                }
+            }
+
+        )
+    },
     
 }
 
