@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<main class="main" id="main">
+    <div class="container">
+      <h2 class="text-center text-capitalize">
+            add an movie production
+        </h2>
+        <form action="http://localhost:3000/api/production/create" method="post" class="post" id="productionform">
+            <div class="row mb-3">
+                <label for="production" class="form-label">
+                    production
+                </label>
+                <input type="text" name="production" id="production" class="form-control">
+            </div>
+            <button class="btn btn-primary" type="submit" role="button">ADD MOVIE PRODUCTION</button>
+        </form>  
+    </div>
+</main>
+<%- include('../partials/footer') %>

@@ -20,6 +20,7 @@ index.use(cors())
 index.use(express.json())
 index.use(express.urlencoded({extended:true}))
 
+index.set('view engine','ejs')
 index.use('/', router)
 
 index.listen(PORT, ()=> console.log(`SERVER LISTENING AT http://localhost:${PORT}`))

@@ -22,5 +22,15 @@ router.get('/genreMovie/:g',(req,res)=>{
     dao.findByGenre(res,dao.table,req.params.g)
 })
 
+// POST
+
+router.post('/create',(req,res)=>{
+    dao.create(req,res,dao.table)
+})
+
+// PATCH
+router.patch('/update/:id',(req,res)=>{
+    dao.update(req,res,dao.table)
+})
 
 module.exports = router

@@ -1,0 +1,18 @@
+<%- include('../partials/header') %>
+<main class="main" id="main">
+    <div class="container">
+        <h2 class="text-center text-capitalize">
+            add a streaming platform
+        </h2>
+        <form action="http://localhost:3000/api/streamingPlatform/create" method="post" class="post" id="streamingform">
+            <div class="row mb-3">
+                <label for="streaming_platform" class="form-label">
+                    Streaming Platform
+                </label>
+                <input type="text" name="streaming_platform" id="streaming_platform" class="form-control">
+            </div>
+            <button class="btn btn-primary" type="submit" role="button">ADD STREAMING PLATFORM</button>
+        </form>
+    </div>
+</main>
+<%- include('../partials/footer') %>

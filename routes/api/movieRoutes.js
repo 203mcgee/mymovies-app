@@ -18,4 +18,16 @@ router.get('/begins/:l',(req,res)=>{
     dao.beginsWithLetter(res,dao.table,req.params.l)
 })
 
+//POST
+
+router.post('/create',(req,res)=>{
+    dao.create(req,res,dao.table)
+})
+
+// PATCH
+
+router.patch('/update/:id',(req,res)=>{
+    dao.update(req,res,dao.table)
+})
+
 module.exports = router
